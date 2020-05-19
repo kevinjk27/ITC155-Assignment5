@@ -5,10 +5,14 @@ public class writeNums {
 		System.out.println();
 		writeNums(12);
 		System.out.println();
+		writeNums(0);
+		System.out.println();
 	}
 
 	public static void writeNums(int numero) {
-		if (numero == 1) {
+		if (numero <= 0) {
+			throw new IllegalArgumentException();
+		} else if (numero == 1) {
 			System.out.print("1");
 
 		} else {
